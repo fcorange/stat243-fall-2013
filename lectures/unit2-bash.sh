@@ -194,14 +194,14 @@ function l2h(){
 function niceR(){
     # submits nice'd R jobs
 # syntax of a function call: niceR file.r Rout
-    if [ $# != "2" ]
-    then 
+if [ $# != "2" ]    #Check if number of inputs equals 2
+    then
         echo "usage: niceR inputRfile outputfile" 
-    elif [ -e "$2" ]
-    then 
+elif [ -e "$2" ]    #Check if the second file (output) exists already
+    then
         echo "$2 exists, I won't overwrite" 
-    elif [ ! -e "$1" ]
-    then 
+elif [ ! -e "$1" ]  #Check if the first file (input) exists
+    then
         echo "inputRfile $1 does not exist" 
     else 
         echo "running R on $1" 
