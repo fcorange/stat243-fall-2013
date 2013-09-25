@@ -8,7 +8,7 @@
 #####################################################
 
  getwd()  # a common error is not knowing what directory R is looking at
- setwd('../data')
+ setwd('/Users/Frank/Documents/stat243-fall-2013/data')
  dat <- read.table('RTADataSub.csv', sep = ',', head = TRUE)
  lapply(dat, class)
  levels(dat[ ,2])
